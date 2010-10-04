@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://gfxmonk.net/dist/0install/0local.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+	<name>0local</name>
+	<summary>create a local version of a feed</summary>
+	<description>
+	</description>
+	<homepage>http://github.com/gfxmonk/0local</homepage>
+	<needs-terminal/>
+	<group main="0local">
+		<requires interface="http://gfxmonk.net/dist/0install/version.xml">
+			<environment insert="" mode="prepend" name="PYTHONPATH"/>
+			<version not-before="0.3"/>
+		</requires>
+   <implementation id="sha1new=33e74eb8915b9d9e296b5a2412a17a3197083159" released="2010-10-04" version="0.0.1">
+     <manifest-digest sha256="71212cf05ab2b3474cf4c54dc5a665c41b41fedaf3b753c6482f034ce17987e9"/>
+     <archive href="http://gfxmonk.net/dist/0install/0local/0local-0.0.1.tgz" size="1081"/>
+   </implementation>
+	</group>
+</interface>
