@@ -1,8 +1,9 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="http://gfxmonk.net/dist/0install/0local.xml">
+<interface uri="http://gfxmonk.net/dist/0install/0local.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
 	<name>0local</name>
 	<summary>create a local version of a feed</summary>
+	<publish mode="0tools" xmlns="http://gfxmonk.net/dist/0install"/>
 	<description>
 Create a local version of a given feed.
 
