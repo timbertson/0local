@@ -1,9 +1,34 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://gfxmonk.net/dist/0install/0local.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="http://gfxmonk.net/dist/0install/0local.xml">
 	<name>0local</name>
 	<summary>create a local version of a feed</summary>
 	<description>
+Create a local version of a given feed.
+
+This is useful to:
+ - Test modifications to a feed locally, without having to
+   publish them.
+ - Override the implementation for a public feed with your
+   own sources.
+
+Usage:
+
+	0local feed.xml
+
+Creates feed-local.xml in the current directory (overwriting
+it if present). This local feed will have only one (local)
+implementation, with path &amp;quot;.&amp;quot;
+
+You can also pass in a URL instead of a filename, to make a
+local version of the feed at that URL.
+
+To register (or unregister) your local feed as the preferred
+implementation for the feed URI, run:
+
+	0launch -f feed-local.xml
+
+And follow the prompts.
 	</description>
 	<homepage>http://github.com/gfxmonk/0local</homepage>
 	<needs-terminal/>
@@ -12,9 +37,9 @@
 			<environment insert="" mode="prepend" name="PYTHONPATH"/>
 			<version not-before="0.3"/>
 		</requires>
-   <implementation id="sha1new=33e74eb8915b9d9e296b5a2412a17a3197083159" released="2010-10-04" version="0.0.1">
-     <manifest-digest sha256="71212cf05ab2b3474cf4c54dc5a665c41b41fedaf3b753c6482f034ce17987e9"/>
-     <archive href="http://gfxmonk.net/dist/0install/0local/0local-0.0.1.tgz" size="1081"/>
-   </implementation>
+		<implementation id="sha1new=33e74eb8915b9d9e296b5a2412a17a3197083159" released="2010-10-04" version="0.0.1">
+			<manifest-digest sha256="71212cf05ab2b3474cf4c54dc5a665c41b41fedaf3b753c6482f034ce17987e9"/>
+			<archive href="http://gfxmonk.net/dist/0install/0local/0local-0.0.1.tgz" size="1081"/>
+		</implementation>
 	</group>
 </interface>
