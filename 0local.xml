@@ -35,7 +35,6 @@ And follow the prompts.
 	<needs-terminal/>
 	<group main="0local">
 		<requires interface="http://gfxmonk.net/dist/0install/version.xml">
-			<environment insert="" mode="prepend" name="PYTHONPATH"/>
 			<version not-before="0.3"/>
 		</requires>
 		<implementation id="sha1new=33e74eb8915b9d9e296b5a2412a17a3197083159" released="2010-10-04" version="0.0.1">
