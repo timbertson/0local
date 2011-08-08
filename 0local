@@ -42,7 +42,7 @@ def main(xml_file, output_path=None):
 		print >> sys.stderr, "Warning: Couldn't guess version, using %s" % (last_version,)
 	
 	version = Version(last_version)
-	version = version.increment()
+	version = version.next()
 
 	local_implementation = dom.createElementNS(ns, "implementation")
 	local_implementation.setAttribute("id", opts.path)

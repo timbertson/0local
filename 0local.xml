@@ -1,9 +1,9 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://gfxmonk.net/dist/0install/0local.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="http://gfxmonk.net/dist/0install/0local.xml">
 	<name>0local</name>
 	<summary>create a local version of a feed</summary>
-	<publish mode="0tools" xmlns="http://gfxmonk.net/dist/0install"/>
+	<publish xmlns="http://gfxmonk.net/dist/0install" mode="0tools"/>
 	<description>
 Create a local version of a given feed.
 
@@ -40,6 +40,15 @@ And follow the prompts.
 		<implementation id="sha1new=33e74eb8915b9d9e296b5a2412a17a3197083159" released="2010-10-04" version="0.0.1">
 			<manifest-digest sha256="71212cf05ab2b3474cf4c54dc5a665c41b41fedaf3b753c6482f034ce17987e9"/>
 			<archive href="http://gfxmonk.net/dist/0install/0local/0local-0.0.1.tgz" size="1081"/>
+		</implementation>
+	</group>
+	<group main="0local">
+		<requires interface="http://gfxmonk.net/dist/0install/version.xml">
+			<version not-before="0.6"/>
+		</requires>
+		<implementation id="sha1new=e42bd9dc334293969de3ad0c10485d5b1fd46a86" released="2011-08-08" version="0.1">
+			<manifest-digest sha256="6f2d9e9c2bea33a36fdc2d3b94fff7aff8729fe1ca0a349f50902e458d3943c1"/>
+			<archive href="http://gfxmonk.net/dist/0install/0local/0local-0.1.tgz" size="1079"/>
 		</implementation>
 	</group>
 </interface>
