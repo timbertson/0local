@@ -50,5 +50,9 @@ And follow the prompts.
 			<manifest-digest sha256="6f2d9e9c2bea33a36fdc2d3b94fff7aff8729fe1ca0a349f50902e458d3943c1"/>
 			<archive href="http://gfxmonk.net/dist/0install/0local/0local-0.1.tgz" size="1079"/>
 		</implementation>
+		<implementation id="sha1new=8a23e37da23642210dd2a21a18bcc44bab186005" released="2011-08-21" version="0.2">
+			<manifest-digest sha256="1b736f25084978355310ddb2d0294d6d694e63333723dd3dfec3c0bec88c0960"/>
+			<archive href="http://gfxmonk.net/dist/0install/0local/0local-0.2.tgz" size="1129"/>
+		</implementation>
 	</group>
 </interface>
