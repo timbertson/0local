@@ -18,6 +18,8 @@ def main(xml_file, output_path=None):
 		is_url = True
 		import urllib
 		input_file = urllib.urlopen(xml_file)
+	else:
+		input_file = open(xml_file)
 	if output_path is None:
 		if is_url:
 			xml_file = xml_file.rstrip('/').rsplit('/', 1)[-1]
