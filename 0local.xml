@@ -35,7 +35,7 @@ And follow the prompts.
 	<needs-terminal/>
 	<group main="0local">
 		<requires interface="http://gfxmonk.net/dist/0install/version.xml">
-			<version not-before="0.3"/>
+			<version before="0.7" not-before="0.3"/>
 		</requires>
 		<implementation id="sha1new=33e74eb8915b9d9e296b5a2412a17a3197083159" released="2010-10-04" version="0.0.1">
 			<manifest-digest sha256="71212cf05ab2b3474cf4c54dc5a665c41b41fedaf3b753c6482f034ce17987e9"/>
@@ -44,7 +44,7 @@ And follow the prompts.
 	</group>
 	<group main="0local">
 		<requires interface="http://gfxmonk.net/dist/0install/version.xml">
-			<version not-before="0.6"/>
+			<version before="0.7" not-before="0.6"/>
 		</requires>
 		<implementation id="sha1new=e42bd9dc334293969de3ad0c10485d5b1fd46a86" released="2011-08-08" version="0.1">
 			<manifest-digest sha256="6f2d9e9c2bea33a36fdc2d3b94fff7aff8729fe1ca0a349f50902e458d3943c1"/>
@@ -57,6 +57,15 @@ And follow the prompts.
 		<implementation id="sha1new=3c68e00e299627fb9e5f790e7941111ebef91151" released="2011-08-28" version="0.2.1">
 			<manifest-digest sha256="67515f97a90a0f5a57e88c7e52b086483e78525299765d9f765cd6beb8bbce22"/>
 			<archive href="http://gfxmonk.net/dist/0install/0local/0local-0.2.1.tgz" size="1137"/>
+		</implementation>
+	</group>
+	<group main="0local">
+		<requires interface="http://gfxmonk.net/dist/0install/version.xml">
+			<version not-before="0.7"/>
+		</requires>
+		<implementation id="sha1new=efd89fce90f26329fce735361230e841a54b9d54" released="2011-12-30" version="0.2.2">
+			<manifest-digest sha256="6143bfba589436916e7e884b41771e60a0090121490062110d850864af981062"/>
+			<archive href="http://gfxmonk.net/dist/0install/0local/0local-0.2.2.tgz" size="1137"/>
 		</implementation>
 	</group>
 </interface>
