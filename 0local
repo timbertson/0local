@@ -33,22 +33,21 @@ def main(xml_file, output_path=None):
 	interface = dom.documentElement.getAttribute("uri")
 	feed_for = dom.getElementsByTagNameNS(ns, "feed-for")
 
-	# add <feed-for> if there isn't one laready
+	# add <feed-for> if there isn't one already
 	if not feed_for:
 		feed_for = dom.createElementNS(ns, "feed-for")
 		feed_for.setAttribute("interface", interface)
 		dom.documentElement.appendChild(feed_for)
 
 	# make a local implementation with one version above the latest
-	get_version = lambda node: node.getAttribute("version")
+	get_version = lambda node: Version.parse(node.getAttribute("version"))
 	try:
 		last_version = max(map(get_version, implementations))
 	except StandardError:
-		last_version = "0.0.0"
+		last_version = Version.parse("0.0.0")
 		print >> sys.stderr, "Warning: Couldn't guess version, using %s" % (last_version,)
 	
-	version = Version(last_version)
-	version = version.next()
+	version = last_version.next()
 
 	local_implementation = dom.createElementNS(ns, "implementation")
 	local_implementation.setAttribute("id", opts.path)
