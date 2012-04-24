@@ -60,6 +60,13 @@ And follow the prompts.
 		</implementation>
 	</group>
 	<group main="0local">
+                <command name="run" path="0local">
+                        <runner interface="http://repo.roscidus.com/python/python"/>
+                </command>
+                <requires interface="http://repo.roscidus.com/python/python">
+                        <version before="3"/>
+                </requires>
+
 		<requires interface="http://gfxmonk.net/dist/0install/version.xml">
 			<version not-before="0.7"/>
 		</requires>
