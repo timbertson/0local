@@ -23,6 +23,8 @@ def main(xml_file, output_path=None):
 	if output_path is None:
 		if is_url:
 			xml_file = xml_file.rstrip('/').rsplit('/', 1)[-1]
+		if xml_file.endswith(".template"):
+			xml_file = xml_file[:-len(".template")]
 		base, ext = os.path.splitext(xml_file)
 		output_path = base + "-local" + ext
 
@@ -44,8 +46,13 @@ def main(xml_file, output_path=None):
 	try:
 		last_version = max(map(get_version, implementations))
 	except StandardError:
-		last_version = Version.parse("0.0.0")
-		print >> sys.stderr, "Warning: Couldn't guess version, using %s" % (last_version,)
+		local_version_file = os.path.join(os.path.dirname(xml_file), 'VERSION')
+		if os.path.exists(local_version_file):
+			with open(local_version_file) as f:
+				last_version = Version.parse(f.read().strip(), expand_symbolic=True)
+		else:
+			last_version = Version.parse("0.0.0")
+			print >> sys.stderr, "Warning: Couldn't guess version from feed, using %s" % (last_version,)
 	
 	version = last_version.next()
 
@@ -65,6 +72,7 @@ def main(xml_file, output_path=None):
 		write(sys.stdout)
 	else:
 		with open(output_path, 'w') as output: write(output)
+		print >> sys.stderr, "Wrote %s" % (output_path,)
 
 def configure():
 	global opts
