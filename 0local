@@ -67,7 +67,9 @@ def main(xml_file, output_path=None):
 	assert groups, "no <group> elements found!"
 	groups[-1].appendChild(local_implementation)
 
-	write = lambda out: dom.writexml(out)
+	def write(out):
+		data = dom.toxml('utf-8')
+		out.write(data)
 	if output_path == '-':
 		write(sys.stdout)
 	else:
