@@ -43,7 +43,7 @@ And follow the prompts.
 		<requires interface="http://gfxmonk.net/dist/0install/version.xml">
 			<version not-before="0.10"/>
 		</requires>
-		<implementation version="{version}" released="{date}">
+		<implementation version="{version}">
 			<manifest-digest/>
 			<archive href="{archive}"/>
 		</implementation>
