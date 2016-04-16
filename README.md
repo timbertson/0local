@@ -1,3 +1,5 @@
+<img src="http://gfxmonk.net/dist/status/project/0local.png">
+
 Create a local version of a given feed.
 
 This is useful to:
